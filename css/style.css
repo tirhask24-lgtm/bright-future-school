@@ -1,0 +1,744 @@
+
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f1f5f9;
+}
+
+/* School header */
+header {
+    background-color: #12345a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-bottom: 0;
+    color: #f5d47a;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #0f172a;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s ease,
+                background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #12345a;
+    background-color: #f5d47a;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #f5d47a;
+    outline-offset: 4px;
+}
+
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #12345a;
+    margin-top: 0;
+    border-bottom: 2px solid #f5d47a;
+    padding-bottom: 8px;
+}
+
+/* Small-screen support */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+     nav {
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(
+        135deg,
+        #12345a,
+        #2563a6
+    );
+    color: white;
+    text-align: center;
+    padding: 80px 25px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    color: #f5d47a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #f5d47a;
+    color: #12345a;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
+
+/* School image section */
+.school-image-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.school-image {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* About section */
+.about-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-content {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #2563a6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    color: #12345a;
+    font-size: 32px;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.highlight-card {
+    background-color: #f1f5f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 4px solid #f5d47a;
+}
+
+.highlight-card h3 {
+    color: #12345a;
+}
+
+.highlight-card p {
+    margin-bottom: 0;
+}
+
+/* Programs section */
+.programs-section {
+    background-color: #eaf1f8;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.programs-intro {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.programs-intro h2 {
+    color: #12345a;
+    font-size: 32px;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.program-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-bottom: 4px solid #f5d47a;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-card h3 {
+    color: #12345a;
+}
+
+.program-card p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .programs-section {
+        padding: 20px;
+    }
+
+    .programs-intro h2 {
+        font-size: 26px;
+    }
+}
+
+/* Admissions section */
+.admissions-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Admissions introduction */
+.admissions-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.admissions-intro h2 {
+    color: #12345a;
+    font-size: 32px;
+}
+
+/* Enrollment steps layout */
+.admissions-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Individual step cards */
+.admission-card {
+    background-color: #f1f5f9;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #f5d47a;
+    transition: transform 0.3s ease;
+}
+
+.admission-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Step number */
+.step-number {
+    display: inline-block;
+    color: #2563a6;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Card headings */
+.admission-card h3 {
+    color: #12345a;
+}
+
+/* Admissions button container */
+.admissions-action {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* Admissions button */
+.admissions-button {
+    display: inline-block;
+    background-color: #12345a;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.admissions-button:hover {
+    background-color: #2563a6;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .admissions-section {
+        padding: 20px;
+    }
+
+    .admissions-intro h2 {
+        font-size: 26px;
+    }
+}
+
+/* Contact section */
+.contact-section {
+    background-color: #eaf1f8;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Contact introduction */
+.contact-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.contact-intro h2 {
+    color: #12345a;
+    font-size: 32px;
+}
+
+/* Contact information and form layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Contact information card */
+.contact-info {
+    background-color: #12345a;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    color: #f5d47a;
+    margin-top: 0;
+}
+
+.contact-item {
+    margin-top: 25px;
+}
+
+.contact-item h4 {
+    color: #f5d47a;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    overflow-wrap: anywhere;
+    margin-top: 0;
+}
+
+/* Form container */
+.contact-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form-container h3 {
+    color: #12345a;
+    margin-top: 0;
+}
+
+/* Form labels */
+.contact-form-container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Form fields */
+.contact-form-container input,
+.contact-form-container textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+/* Keyboard focus */
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    outline: 2px solid #2563a6;
+    outline-offset: 2px;
+}
+
+/* Submit button */
+.contact-form-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #12345a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #2563a6;
+}
+
+/* Demo notice */
+.form-note {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-intro h2 {
+        font-size: 26px;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        padding: 20px;
+    }
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.form-message.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .school-image {
+        max-height: 280px;
+    }
+
+    .about-section,
+    .contact-section {
+        padding: 20px;
+    }
+
+    .about-highlights,
+    .programs-grid,
+    .admissions-steps,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Website footer */
+.site-footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.site-footer h2 {
+    color: #f5d47a;
+    margin-top: 0;
+}
+
+.site-footer p {
+    margin: 12px 0;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 18px;
+    background-color: #f5d47a;
+    color: #12345a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: white;
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid #f5d47a;
+    outline-offset: 4px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+/* Mobile navigation menu */
+.menu-toggle {
+    display: none;
+    background-color: #12345a;
+    color: white;
+    border: 2px solid #f5d47a;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Mobile screen styles */
+@media (max-width: 600px) {
+    nav.navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-self: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+/* Highlight the active navigation link */
+.nav-links a.active {
+    background-color: #f5d47a;
+    color: #12345a;
+    border-radius: 5px;
+}
+
+/* Dark mode button */
+.theme-toggle {
+    background-color: #f5d47a;
+    color: #12345a;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Dark theme colors */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode main section:not(.hero) {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark-mode main section h2,
+body.dark-mode main section h3 {
+    color: #f5d47a;
+}
+
+body.dark-mode .about-section,
+body.dark-mode .programs-section,
+body.dark-mode .admissions-section,
+body.dark-mode .contact-section {
+    background-color: #1e293b;
+}
+
+/* Smooth entrance animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animate the main content sections */
+main section {
+    animation: fadeInUp 0.6s ease both;
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Make keyboard focus easy to see */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #2563a6;
+    outline-offset: 3px;
+}
+
+/* Keep focus visible on dark backgrounds */
+header a:focus-visible,
+nav a:focus-visible,
+.site-footer a:focus-visible,
+.site-footer button:focus-visible {
+    outline-color: #f5d47a;
+}
